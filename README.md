@@ -14,8 +14,31 @@ This project involves the collection of cryptocurrency addresses flagged for inv
 ## Data Description
 The dataset consists of the following columns:
 - `crypto_address`: The cryptocurrency address that has been flagged.
-- `crypto_name`: The name of the cryptocurrency (e.g., Bitcoin, Ethereum, Litecoin).
-- `flagging_reason`: The reason for the flagging, such as dark web activities, money laundering, hacking, terrorism, etc.
+- `crypto_name`: The name of the cryptocurrency, which can be one of the following categories:
+  - Bitcoin
+  - Ethereum
+  - Polygon
+  - Solana
+  - Litecoin
+  - Tron
+- `flagging_reason`: The reason for the flagging, which can be one of the following categories:
+  - Blackmail Scam
+  - Sextortion Scam
+  - Ransomware
+  - Other
+  - Romance Scam
+  - Phishing Scam
+  - Hacking
+  - Pigbutchering Scam
+  - Fake Project Scam
+  - Impersonation Scam
+  - Fake Returns Scam
+  - SIM Swap Scam
+  - Rug Pull Scam
+  - Donation Impersonation Scam
+  - Contract Exploit Scam
+  - NFT Airdrop Scam
+  - Investment Scam
 
 ## License
 This project is licensed under the [MIT License](https://github.com/umairsiddique3171/solar-angles-calculator-for-maximizing-solar-panel-efficiency/blob/main/LICENSE).
