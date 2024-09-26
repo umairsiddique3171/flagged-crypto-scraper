@@ -1,0 +1,5 @@
+# ENTER YOUR EMAIL
+EMAIL = ""    
+
+# ENTER YOUR PASSWORD
+PASSWORD = ""       

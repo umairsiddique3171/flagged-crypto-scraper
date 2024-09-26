@@ -9,7 +9,38 @@ This project involves the collection of cryptocurrency addresses flagged for inv
 ## Data Collection Process
 - **Tools Used**: Scrapy, Selenium
 - **Process**: The data collection involved analyzing the CSS used on Chainabuse.com to create CSS selectors for data extraction. Scrapy was used to extract content from the pages, while Selenium was employed to navigate through the pages as Chainabuse.com is a JavaScript-driven, dynamic website.
-- **Preprocessing**: The data underwent cleaning to remove duplicates and ensure the uniqueness of addresses. This step was crucial to maintain the integrity and reliability of the dataset.
+- **Data Preprocessing**: The data underwent cleaning through pipelines to remove duplicates and ensure the uniqueness of addresses. This step was crucial to maintain the integrity and reliability of the dataset.
+
+## Scraper Usage 
+1. Ensure that chromedriver is set up on your system according to your chrome version.
+2. Clone the repository:
+   ```
+   git clone https://github.com/umairsiddique3171/multi-lang-invoice-data-extractor.git
+   cd multi-lang-invoice-data-extractor
+   ```
+3. Create and activate a virtual environment:
+   ```
+   python -m venv env
+   .\env\Scripts\activate
+   ```
+4. Install the required dependencies:
+
+   ```
+   pip install -r requirements.txt
+   ```
+5. If you prefer to use ``incognito mode (recommended)``, no changes are necessary. However, if you wish to use your Chrome profile, update the ``config.yaml`` file with the path to your profile, which you can find by entering ``chrome://version/`` in the address bar. Additionally, uncomment the following lines in ``cryptospider.py``:
+   ```
+   # chrome_options.add_argument("incognito")    # using incognito
+   chrome_options.add_argument(f"user-data-dir={utils.profile_directory}")     # chrome profile directory 
+   chrome_options.add_argument(f"--profile-directory={utils.profile_name}")      # chrome profile name
+   ```
+   Using your standard profile for scraping may cause conflicts due to the profile's port being in use. It's recommended to copy the profile you want to use into a different folder, and then use that copy for scraping. This way, the profile will always be available for use without conflicts. Therefore, it's better to use incognito mode so you don't have to deal with these issues.
+6. Add the values for the number of pages to be scraped for the corresponding cryptocurrencies in the config.yaml file.
+7. Run the scraper:
+   ```
+   cd cryptoscraper/cryptoscraper/spiders
+   scrapy crawl cryptospider -o data.csv
+   ```
 
 ## Data Description
 The dataset consists of the following columns:

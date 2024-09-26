@@ -1,0 +1,15 @@
+# Please update the fields based on your specific use case.
+
+PROFILE_DIRECTORY: ""    # chrome profile directory
+PROFILE_NAME: ""      # chrome profile name
+
+CRYPTO: 
+# A value of 0 indicates that the corresponding cryptocurrency will be excluded during the scraping process.
+# A positive value greater than 0 specifies the number of pages to be scraped for the corresponding cryptocurrency.
+# symbol:num_pages
+  BTC: 0
+  ETH: 0
+  POLYGON: 0
+  SOL: 0
+  LITECOIN: 0
+  TRON: 0
