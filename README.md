@@ -24,11 +24,10 @@ This project involves the collection of cryptocurrency addresses flagged for inv
    .\env\Scripts\activate
    ```
 4. Install the required dependencies:
-
    ```
    pip install -r requirements.txt
    ```
-5. If you prefer to use ``incognito mode (recommended)``, no changes are necessary. However, if you wish to use your Chrome profile, update the ``config.yaml`` file with the path to your profile, which you can find by entering ``chrome://version/`` in the address bar. Additionally, uncomment the following lines in ``cryptospider.py``:
+5. If you prefer to use **incognito mode (recommended)**, no changes are necessary. However, if you wish to use your Chrome profile, update the **config.yaml** file with the path to your profile, which you can find by entering **chrome://version/** in the address bar. Additionally, uncomment the following lines in **cryptospider.py**:
    ```
    # chrome_options.add_argument("incognito")    # using incognito
    chrome_options.add_argument(f"user-data-dir={utils.profile_directory}")     # chrome profile directory 
@@ -72,7 +71,7 @@ The dataset consists of the following columns:
   - Investment Scam
 
 ## License
-This project is licensed under the [MIT License](https://github.com/umairsiddique3171/solar-angles-calculator-for-maximizing-solar-panel-efficiency/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/umairsiddique3171/flagged-crypto-scraping/blob/main/LICENSE).
 
 ## Author 
 [@umairsiddique3171](https://github.com/umairsiddique3171)
