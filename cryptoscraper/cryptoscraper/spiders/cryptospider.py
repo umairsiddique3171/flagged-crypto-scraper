@@ -15,7 +15,7 @@ import time
 class CryptospiderSpider(scrapy.Spider):
     name = "cryptospider"
     allowed_domains = ["chainabuse.com"]
-    cryptos,page = utils.load_crypto_config()
+    cryptos,pages = utils.load_crypto_config()
 
     def __init__(self, *args, **kwargs):
         super(CryptospiderSpider, self).__init__(*args, **kwargs)
