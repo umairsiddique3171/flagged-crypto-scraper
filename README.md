@@ -11,6 +11,35 @@ This project involves the collection of cryptocurrency addresses flagged for inv
 - **Process**: The data collection involved analyzing the CSS used on Chainabuse.com to create CSS selectors for data extraction. Scrapy was used to extract content from the pages, while Selenium was employed to navigate through the pages as Chainabuse.com is a JavaScript-driven, dynamic website.
 - **Data Preprocessing**: The data underwent cleaning through pipelines to remove duplicates and ensure the uniqueness of addresses. This step was crucial to maintain the integrity and reliability of the dataset.
 
+## Data Description
+The dataset consists of the following columns:
+- `crypto_address`: The cryptocurrency address that has been flagged.
+- `crypto_name`: The name of the cryptocurrency, which can be one of the following categories:
+  - Bitcoin
+  - Ethereum
+  - Polygon
+  - Solana
+  - Litecoin
+  - Tron
+- `flagging_reason`: The reason for the flagging, which can be one of the following categories:
+  - Blackmail Scam
+  - Sextortion Scam
+  - Ransomware
+  - Other
+  - Romance Scam
+  - Phishing Scam
+  - Hacking
+  - Pigbutchering Scam
+  - Fake Project Scam
+  - Impersonation Scam
+  - Fake Returns Scam
+  - SIM Swap Scam
+  - Rug Pull Scam
+  - Donation Impersonation Scam
+  - Contract Exploit Scam
+  - NFT Airdrop Scam
+  - Investment Scam
+
 ## Scraper Usage 
 1. Ensure that chromedriver is set up on your system according to your chrome version.
 2. Clone the repository:
@@ -40,35 +69,6 @@ This project involves the collection of cryptocurrency addresses flagged for inv
    cd cryptoscraper/cryptoscraper/spiders
    scrapy crawl cryptospider -o data.csv
    ```
-
-## Data Description
-The dataset consists of the following columns:
-- `crypto_address`: The cryptocurrency address that has been flagged.
-- `crypto_name`: The name of the cryptocurrency, which can be one of the following categories:
-  - Bitcoin
-  - Ethereum
-  - Polygon
-  - Solana
-  - Litecoin
-  - Tron
-- `flagging_reason`: The reason for the flagging, which can be one of the following categories:
-  - Blackmail Scam
-  - Sextortion Scam
-  - Ransomware
-  - Other
-  - Romance Scam
-  - Phishing Scam
-  - Hacking
-  - Pigbutchering Scam
-  - Fake Project Scam
-  - Impersonation Scam
-  - Fake Returns Scam
-  - SIM Swap Scam
-  - Rug Pull Scam
-  - Donation Impersonation Scam
-  - Contract Exploit Scam
-  - NFT Airdrop Scam
-  - Investment Scam
 
 ## License
 This project is licensed under the [MIT License](https://github.com/umairsiddique3171/flagged-crypto-scraping/blob/main/LICENSE).
